@@ -1,11 +1,11 @@
 .sidebar {
   background: #fff;
   color: #0f0f0f;
-  width: 15%;
+  width: 220px;
   height: 100vh;
   position: fixed;
   top: 0;
-  padding-left: 2%;
+  padding-left: 4%;
   padding-top: 80px;
 }
 
@@ -27,11 +27,11 @@
   cursor: pointer;
 }
 
-.sidebar hr {
+#hr {
   border: 0;
   height: 1px;
   background: #ccc;
-  width: 120%;
+  width: 100%;
 }
 
 .subscribed-list h3{
@@ -44,4 +44,23 @@
   width: 25px;
   border-radius: 50%;
   margin-right: 20px;
+}
+
+.small-sidebar {
+  margin-left: -2%;
+  background: #fff;
+  width: 60px;
+}
+
+.small-sidebar p {
+  display: none;
+}
+
+.small-sidebar h3 {
+  display: none;
+}
+
+.small-sidebar hr {
+  width: 40%;
+  margin-bottom: 25px;
 }
