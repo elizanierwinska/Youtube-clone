@@ -5,7 +5,6 @@
   height: 100vh;
   position: fixed;
   top: 0;
-  padding-left: 4%;
   padding-top: 80px;
 }
 
@@ -19,6 +18,7 @@
 }
 
 .side-link {
+  padding-left: 6%;
   display: flex;
   align-items: center;
   margin-bottom: 20px;
@@ -38,6 +38,7 @@
   font-size: 13px;
   margin: 20px 0;
   color: #5a5a5a;
+  padding-left: 6%;
 }
 
 .subscribed-list img {
@@ -47,7 +48,6 @@
 }
 
 .small-sidebar {
-  margin-left: -2%;
   background: #fff;
   width: 60px;
 }
@@ -60,7 +60,11 @@
   display: none;
 }
 
+.small-sidebar .side-link {
+  margin-left: 16%;
+}
+
 .small-sidebar hr {
-  width: 40%;
+  width: 100%;
   margin-bottom: 25px;
 }
