@@ -1,5 +1,6 @@
-import React from "react";
 import "./Navbar.css"
+import React from "react";
+import { Link } from 'react-router-dom';
 import menuIcon from "../../assets/menu.png";
 import logo from "../../assets/logo.png";
 import searchIcon from "../../assets/search.png";
@@ -14,7 +15,9 @@ const Navbar = ({setSidebar}) => {
       <div className="nav-left flex-div">
         {/* To change state to the opposite of the previous one, add exlamation mark before */}
         <img className="menu-icon" onClick={() => setSidebar(prev => !prev)} src={menuIcon} alt="" />
-        <img className="logo" src={logo} alt="" />
+        <Link to='/'>
+          <img className="logo" src={logo} alt="" />
+        </Link>
       </div>
       <div className="nav-middle flex-div">
         <div className="search-box flex-div">
