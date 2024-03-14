@@ -5,9 +5,8 @@ import menuIcon from "../../assets/menu.png";
 import logo from "../../assets/logo.png";
 import searchIcon from "../../assets/search.png";
 import uploadIcon from "../../assets/upload.png";
-import moreIcon from "../../assets/more.png";
 import notificationIcon from "../../assets/notification.png";
-import profileIcon from "../../assets/jack.png";
+import profileIcon from "../../assets/user_profile.jpg";
 
 const Navbar = ({setSidebar}) => {
   return (
@@ -28,7 +27,6 @@ const Navbar = ({setSidebar}) => {
       </div>
       <div className="nav-right flex-div">
         <img src={uploadIcon} alt="" />
-        <img src={moreIcon} alt="" />
         <img src={notificationIcon} alt="" />
         <img src={profileIcon} className="user-icon" alt="" />
       </div>

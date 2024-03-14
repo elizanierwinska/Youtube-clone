@@ -28,3 +28,8 @@
   margin: 4px 0;
   color: #606060;
 }
+@media (max-width: 900px) {
+  .recommended {
+    flex-basis: 100%;
+  }
+}

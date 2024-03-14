@@ -4,6 +4,7 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import { APIKey, valueConverter } from '../../data';
 import moment from 'moment';
+import { useParams } from 'react-router-dom';
 import like from '../../assets/like.png';
 import dislike from '../../assets/dislike.png';
 import share from '../../assets/share.png';
@@ -11,7 +12,9 @@ import save from '../../assets/save.png';
 import jack from '../../assets/jack.png';
 import userProfile from '../../assets/user_profile.jpg';
 
-const PlayVideo = ({ videoId }) => {
+const PlayVideo = () => {
+
+  const { videoId } = useParams();
 
   const [apiData, setApiData] = useState(null);
   const [channelData, setChannelData] = useState(null);
@@ -42,7 +45,7 @@ const PlayVideo = ({ videoId }) => {
 
   useEffect(() => {
     fetchVideoData();
-  }, [])
+  }, [videoId])
 
   useEffect(() => {
     fetchChannelData();
@@ -88,6 +91,7 @@ const PlayVideo = ({ videoId }) => {
                     <img src={like} alt="like button"/>
                     <span>{valueConverter(item.snippet.topLevelComment.snippet.likeCount)}</span>
                     <img src={dislike} alt="dislike button"/>
+                    <p>Reply</p>
                     <span></span>
                   </div>
                 </div>

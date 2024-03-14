@@ -1,5 +1,7 @@
 import React from 'react';
 import './Sidebar.css';
+import menuIcon from "../../assets/menu.png";
+import logo from "../../assets/logo.png";
 import home from '../../assets/home.png';
 import gameIcon from '../../assets/game_icon.png';
 import automobiles from '../../assets/automobiles.png';
@@ -17,10 +19,14 @@ import cameron from '../../assets/cameron.png';
 
 
 
-const Sidebar = ({ sidebar, category, setCategory }) => {
+const Sidebar = ({ sidebar, setSidebar, category, setCategory }) => {
   return (
     <div>
       <div className={`sidebar ${sidebar ? '' : "small-sidebar"}`}>
+        <div className="flex">
+          <img src={menuIcon} className="menu-icon" onClick={() => setSidebar(prev => !prev)} alt='menu icon'/>
+          <img src={logo} className="logo" alt="logo"/>
+        </div>
         <div className="shortcut-links">
           <div className={`side-link ${category === 0 ? 'active' : ''}`} onClick={() => setCategory(0)}>
             <img src={home} alt=""/>

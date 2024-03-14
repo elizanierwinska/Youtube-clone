@@ -9,15 +9,13 @@ import { APIKey, valueConverter } from '../../data';
 const Feed = ({ category }) => {
 
   const [data,setData] = useState([]);
-  console.log("hohoho",data)
+  
 
   const fetchData = async() => {
     const videoListURL = `https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=50&regionCode=US&videoCategoryId=${category}&key=${APIKey}
     `
-    console.log(videoListURL);
-    console.log("===>", await fetch(videoListURL).then(response => response.json()).then(data=>setData(data.items)))
-    // after fetching the data, you await the response
-    // you want to only store a specific array from the response => data.items inside data state
+
+ 
     await fetch(videoListURL).then(response => response.json()).then(data=>setData(data.items))
   }
 
