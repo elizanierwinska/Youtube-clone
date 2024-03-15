@@ -10,6 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "html-entities": "^2.5.2",
+    "html-to-text": "^9.0.5",
     "moment": "^2.30.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

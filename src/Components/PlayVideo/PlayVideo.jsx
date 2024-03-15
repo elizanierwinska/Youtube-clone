@@ -9,8 +9,8 @@ import like from '../../assets/like.png';
 import dislike from '../../assets/dislike.png';
 import share from '../../assets/share.png';
 import save from '../../assets/save.png';
-import jack from '../../assets/jack.png';
-import userProfile from '../../assets/user_profile.jpg';
+import { decode } from 'html-entities';
+import { convert } from 'html-to-text';
 
 const PlayVideo = () => {
 
@@ -58,7 +58,7 @@ const PlayVideo = () => {
       <iframe src={`https://www.youtube.com/embed/${videoId}?autoplay=1`}frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
       <h3>{apiData ? apiData.snippet.title : "Loading..."}</h3>
       <div className="play-video-info">
-      <p>{apiData ? valueConverter(apiData.statistics.viewCount) : "unknown number of"} views &bull; {apiData ? moment(apiData.snippet.publishedAt).fromNow() : ""}</p>
+        <p>{apiData ? valueConverter(apiData.statistics.viewCount) : "unknown number of"} views &bull; {apiData ? moment(apiData.snippet.publishedAt).fromNow() : ""}</p>
         <div>
           <span><img src={like} alt="like button"/>{apiData ? valueConverter(apiData.statistics.likeCount) : '?'}</span>
           <span><img src={dislike} alt="dislike button"/></span>
@@ -86,7 +86,7 @@ const PlayVideo = () => {
                 <img src={item.snippet.topLevelComment.snippet.authorProfileImageUrl} alt="User photo" />
                 <div>
                   <h3>{item.snippet.topLevelComment.snippet.authorDisplayName}<span>1 day ago</span></h3>
-                  <p>{comment}</p>
+                  <p className="comment">{convert(decode(comment))}</p>
                   <div className="comment-action">
                     <img src={like} alt="like button"/>
                     <span>{valueConverter(item.snippet.topLevelComment.snippet.likeCount)}</span>

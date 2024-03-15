@@ -15,6 +15,7 @@ const Recommended = ({ categoryId }) => {
     await fetch(relatedVideoURL).then(res => res.json()).then(data => setApiData(data.items));
   }
 
+
   useEffect(() => {
     fetchData();
   }, [])
@@ -26,7 +27,7 @@ const Recommended = ({ categoryId }) => {
           <Link to={`/video/${item.snippet.categoryId}/${item.id}`} key={index} className="side-video-list">
             <img src={item.snippet.thumbnails.medium.url} alt=""/>
             <div className="vid-info">
-              <h4>{item.snippet.title}</h4>
+              <h4>{item.snippet.title.length > 25 ? item.snippet.title.slice(0,25) + "..." : item.snippet.title}</h4>
               <p>{item.snippet.channelTitle}</p>
               <p>{valueConverter(item.statistics.viewCount)} views &bull; {moment(item.snippet.publishedAt).fromNow()}</p>
             </div>
