@@ -8,7 +8,7 @@ import Video from './Pages/Video/Video';
 // In Route element specify path you want and the component
 const App = () => {
   //initialize state to add functionality to the sidebar
-  const [sidebar, setSidebar] = useState(true);
+  const [sidebar, setSidebar] = useState(false);
 
   return (
     <div>
