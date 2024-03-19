@@ -2,7 +2,7 @@ import "./Navbar.css"
 import React from "react";
 import { Link } from 'react-router-dom';
 import menuIcon from "../../assets/menu.png";
-import logo from "../../assets/logo.png";
+import logo from "../../assets/youtube-icon.jpeg";
 import searchIcon from "../../assets/search.png";
 import uploadIcon from "../../assets/upload.png";
 import notificationIcon from "../../assets/notification.png";

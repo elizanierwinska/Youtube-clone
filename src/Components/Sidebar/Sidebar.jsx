@@ -1,7 +1,7 @@
 import React from 'react';
 import './Sidebar.css';
 import menuIcon from "../../assets/menu.png";
-import logo from "../../assets/logo.png";
+import logo from "../../assets/youtube-icon.jpeg";
 import home from '../../assets/home.png';
 import gameIcon from '../../assets/game_icon.png';
 import automobiles from '../../assets/automobiles.png';
