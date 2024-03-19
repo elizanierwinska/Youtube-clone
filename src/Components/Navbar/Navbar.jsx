@@ -15,7 +15,7 @@ const Navbar = ({setSidebar}) => {
         {/* To change state to the opposite of the previous one, add exlamation mark before */}
         <img className="menu-icon" onClick={() => setSidebar(prev => !prev)} src={menuIcon} alt="" />
         <Link to='/'>
-          <img className="logo" src={logo} alt="" />
+          <img className="logo" src={logo} alt="logo" />
         </Link>
       </div>
       <div className="nav-middle flex-div">
@@ -26,9 +26,9 @@ const Navbar = ({setSidebar}) => {
         </div>
       </div>
       <div className="nav-right flex-div">
-        <img src={uploadIcon} alt="" />
-        <img src={notificationIcon} alt="" />
-        <img src={profileIcon} className="user-icon" alt="" />
+        <img src={uploadIcon} alt="upload icon" />
+        <img src={notificationIcon} alt="notification icon" />
+        <img src={profileIcon} className="user-icon" alt="profile icon" />
       </div>
     </nav>
   )

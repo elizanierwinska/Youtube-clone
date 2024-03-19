@@ -68,7 +68,7 @@ const PlayVideo = () => {
       </div>
       <hr />
       <div className="publisher">
-        <img src={channelData ? channelData.snippet.thumbnails.default.url : ""} alt="Jack's channel profile photo"/>
+        <img src={channelData ? channelData.snippet.thumbnails.default.url : ""} alt=" channel profile photo"/>
         <div>
           <p>{apiData ? apiData.snippet.channelTitle : ""}</p>
           <span>{channelData ? valueConverter(channelData.statistics.subscriberCount) : "unknown number of"} subscribers</span>

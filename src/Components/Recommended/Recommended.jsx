@@ -25,7 +25,7 @@ const Recommended = ({ categoryId }) => {
       {apiData.map((item,index) =>{
         return(          
           <Link to={`/video/${item.snippet.categoryId}/${item.id}`} key={index} className="side-video-list">
-            <img src={item.snippet.thumbnails.medium.url} alt=""/>
+            <img src={item.snippet.thumbnails.medium.url} alt="thumbnail"/>
             <div className="vid-info">
               <h4>{item.snippet.title.length > 25 ? item.snippet.title.slice(0,25) + "..." : item.snippet.title}</h4>
               <p>{item.snippet.channelTitle}</p>
